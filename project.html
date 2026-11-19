@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Projects &middot; leosycthe &middot; Detection Engineering &amp; Blue Team</title>
-  <meta name="description" content="Blue team projects by Muhammad Rayhan Widayat: malware detection pipeline on Wazuh SIEM with YARA and AI analysis, SSH honeypot detection pipeline, SOAR lab with Wazuh & MISP, malware APK reverse engineering, and the OrchestRecon automation tool." />
+  <meta name="description" content="Blue team projects by Muhammad Rayhan Widayat: open source YARA rule contributions, a malware detection pipeline on Wazuh SIEM with YARA and AI analysis, SSH honeypot detection pipeline, SOAR lab with Wazuh & MISP, a CAPEv2 malware sandbox, an LLM augmented threat hunting platform, malware APK reverse engineering, and the OrchestRecon automation tool." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Muhammad Rayhan Widayat" />
   <link rel="canonical" href="https://leosycthe.github.io/project.html" />
@@ -15,14 +15,14 @@
   <meta property="og:url" content="https://leosycthe.github.io/project.html" />
   <meta property="og:site_name" content="leosycthe" />
   <meta property="og:title" content="Projects &middot; leosycthe &middot; Detection Engineering &amp; Blue Team" />
-  <meta property="og:description" content="Blue team projects: malware detection pipeline on Wazuh SIEM, SSH honeypot detection pipeline, SOAR lab, malware APK reverse engineering, and recon automation." />
+  <meta property="og:description" content="Blue team projects: open source YARA rule contributions, malware detection pipeline on Wazuh SIEM, SSH honeypot detection pipeline, SOAR lab, a CAPEv2 malware sandbox, malware APK reverse engineering, and recon automation." />
   <meta property="og:image" content="https://leosycthe.github.io/kanaderasio1.png" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Projects &middot; leosycthe &middot; Detection Engineering &amp; Blue Team" />
-  <meta name="twitter:description" content="Blue team projects: malware detection pipeline, SSH honeypot detection, SOAR lab, malware reverse engineering, and recon automation." />
+  <meta name="twitter:description" content="Blue team projects: open source YARA rules, malware detection pipeline, SSH honeypot detection, SOAR lab, malware sandbox, and recon automation." />
   <meta name="twitter:image" content="https://leosycthe.github.io/kanaderasio1.png" />
 
   <!-- Fonts -->
@@ -104,9 +104,12 @@
                 </div>
               </div>
               <div style="margin-top:8px">
+                <div class="t-line"><span class="t-val">Cyberkarta-YARA-Rules</span></div>
                 <div class="t-line"><span class="t-val">malware_detection_pipeline</span></div>
                 <div class="t-line"><span class="t-val">ssh_honeypot_pipeline</span></div>
                 <div class="t-line"><span class="t-val">soar_lab_network</span></div>
+                <div class="t-line"><span class="t-val">malware_sandbox_yara_pipeline</span></div>
+                <div class="t-line"><span class="t-val">llm_threat_hunting_platform</span></div>
                 <div class="t-line"><span class="t-val">apk_malware_reverse_eng</span></div>
                 <div class="t-line"><span class="t-val">OrchestRecon</span></div>
                 <div class="t-line"><span class="t-val">ctf_writeups</span></div>
@@ -127,6 +130,8 @@
             <div style="display:flex;flex-wrap:wrap;gap:7px">
               <span class="tag">Wazuh</span>
               <span class="tag">YARA</span>
+              <span class="tag">yarGen</span>
+              <span class="tag">CAPEv2</span>
               <span class="tag">Sysmon</span>
               <span class="tag">MITRE ATT&amp;CK</span>
               <span class="tag">Sigma</span>
@@ -150,6 +155,19 @@
           <!-- Project 1 -->
           <article class="project card">
             <div>
+              <div class="title">Cyberkarta YARA Rules (Open Source)</div>
+              <div class="meta">Since 2026 · <span style="margin-left:8px">Open Source · Detection Engineering</span></div>
+              <p class="desc">Open source contributor to Cyberkarta's public YARA rule repository, helping write and review detection rules for malware families used by the community.</p>
+              <div class="tags"><span class="tag">yara</span><span class="tag">open source</span><span class="tag">detection</span></div>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:12px">
+              <a class="btn" href="https://github.com/cyberkarta/Cyberkarta-YARA-Rules" target="_blank" rel="noopener">Repo</a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project card">
+            <div>
               <div class="title">End to End Malware Detection Pipeline</div>
               <div class="meta">Since 2026 · <span style="margin-left:8px">Detection Engineering</span></div>
               <p class="desc">Designed and built a malware detection pipeline that catches threats both when they are written to disk and while they are already running, with automated quarantine, threat intel enrichment, and AI assisted behavior analysis. Validated with adversary emulation and continuous false positive tuning. This was an internal engagement, so implementation details are confidential.</p>
@@ -160,7 +178,7 @@
             </div>
           </article>
 
-          <!-- Project 2 -->
+          <!-- Project 3 -->
           <article class="project card">
             <div>
               <div class="title">SSH Honeypot Detection Pipeline</div>
@@ -173,7 +191,7 @@
             </div>
           </article>
 
-          <!-- Project 3 -->
+          <!-- Project 4 -->
           <article class="project card">
             <div>
               <div class="title">SOAR Lab Network</div>
@@ -183,7 +201,27 @@
             </div>
           </article>
 
-          <!-- Project 4 -->
+          <!-- Project 5 -->
+          <article class="project card">
+            <div>
+              <div class="title">Malware Analysis Sandbox &amp; YARA Automation Pipeline</div>
+              <div class="meta">Since 2026 · <span style="margin-left:8px">Malware Analysis</span></div>
+              <p class="desc">Isolated CAPEv2 (Cuckoo fork) malware sandbox on Proxmox with Windows and Linux analysis VMs, a dedicated network zone with no physical uplink, and INetSim standing in as a fake internet, so detonated samples are observed without any real network access. Detonated and analyzed real WannaCry and Akira ransomware plus the Vidar infostealer, checked against Volatility3 memory forensics and Sysmon telemetry, then automated conversion of the results into draft YARA rules via yarGen, staged for human review before deployment.</p>
+              <div class="tags"><span class="tag">capev2</span><span class="tag">proxmox</span><span class="tag">yara</span><span class="tag">volatility3</span></div>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project card">
+            <div>
+              <div class="title">LLM Augmented Threat Hunting Platform</div>
+              <div class="meta">2026 · <span style="margin-left:8px">Threat Hunting · Automation</span></div>
+              <p class="desc">Custom MCP (Model Context Protocol) server connecting a local LLM to the Wazuh Indexer, enabling an AI agent to perform automated threat hunting. Evaluated an open source AI model focused on cybersecurity, running on Proxmox with GPU passthrough (RTX 5070).</p>
+              <div class="tags"><span class="tag">llm</span><span class="tag">mcp</span><span class="tag">wazuh</span><span class="tag">proxmox</span></div>
+            </div>
+          </article>
+
+          <!-- Project 7 -->
           <article class="project card">
             <div>
               <div class="title">Malware APK Reverse Engineering: "Undangan Nikah"</div>
@@ -196,7 +234,7 @@
             </div>
           </article>
 
-          <!-- Project 5 -->
+          <!-- Project 8 -->
           <article class="project card">
             <div>
               <div class="title">OrchestRecon</div>
@@ -209,7 +247,7 @@
             </div>
           </article>
 
-          <!-- Project 6 -->
+          <!-- Project 9 -->
           <article class="project card">
             <div>
               <div class="title">CTF Writeups Collection</div>
@@ -222,7 +260,7 @@
             </div>
           </article>
 
-          <!-- Project 7 -->
+          <!-- Project 10 -->
           <article class="project card">
             <div>
               <div class="title">Cyber Security Blog</div>
@@ -235,7 +273,7 @@
             </div>
           </article>
 
-          <!-- Project 8 -->
+          <!-- Project 11 -->
           <article class="project card">
             <div>
               <div class="title">CTF Pwn Challenge: Ret2win</div>
